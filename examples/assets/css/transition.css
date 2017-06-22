@@ -1,0 +1,58 @@
+/*翻页*/
+@keyframes slideRightToCenter {
+    from {
+        transform: translate3d(100%, 0, 0);
+    }
+    to {
+        transform: translate3d(0%, 0, 0);
+    }
+}
+@keyframes slideCenterToLeft {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-60%, 0, 0);
+    }
+}
+
+@keyframes slideLeftToCenter {
+    from {
+        transform: translate3d(-60%, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes slideCenterToRight {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(100%, 0, 0);
+    }
+}
+
+.forward-enter,
+.back-enter {
+    will-change: transform;
+}
+
+.forward-enter-active {
+    animation: slideRightToCenter .4s forwards;
+}
+.forward-leave-active {
+    animation: slideCenterToLeft .4s forwards;
+}
+
+.back-enter-active {
+    animation: slideLeftToCenter .4s forwards;
+}
+.back-leave-active {
+    animation: slideCenterToRight .4s forwards;
+}
+
+.forward-enter-active,
+.back-leave-active {
+    z-index: 1 !important;
+}
