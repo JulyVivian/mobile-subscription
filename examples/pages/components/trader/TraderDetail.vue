@@ -1,6 +1,6 @@
 <template>
   <div class="detail-box">
-    <head-content :memberId="memberId"/>
+    <head-content :memberData="memberData"/>
     <calender />
     <timepay :list="timelist"/>
     <cell @click="openMap">
@@ -17,13 +17,15 @@
   import Action from '../Action'
   import Calender from '../ui/Calender'
 
-  import { payfortimes } from './helper.js'
+  import { privateTraders, payfortimes } from './helper.js'
 
   export default {
     data () {
       return {
         memberId: 0,
         timelist: payfortimes,
+        memberlist: privateTraders,
+        memberData: [],
         appointText: '立即预约'
       }
     },
@@ -34,12 +36,19 @@
         this.memberId = id
       }
     },
+    mounted () {
+      this.memberData = this.memberlist.filter(item => {
+        if (item.id === this.memberId) {
+          return true
+        }
+      })
+    },
     methods: {
       openMap () {
         console.log(0)
       },
       goAppoint () {
-        this.$router.push(`/components/trader/appoint/${this.memberId}`)
+        this.$router.push(`/components/appoint/${this.memberId}`)
       }
     },
     components: {

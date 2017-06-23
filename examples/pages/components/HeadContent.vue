@@ -1,33 +1,18 @@
 <template>
   <div class="head-box">
-    <img :src="member[0].pic" />
+    <img :src="memberData[0].pic" />
     <div class="head-conent">
-      <h5>{{member[0].name}}</h5>
-      <p>{{member[0].keywords}}</p>
-      <div>{{member[0].detail}}</div>
+      <h5>{{memberData[0].name}}</h5>
+      <p>{{memberData[0].keywords}}</p>
+      <div>{{memberData[0].detail}}</div>
     </div>
   </div>
 </template>
 <script>
-  import { sumdata } from '../../assets/helper.js'
-
   export default {
-    data () {
-      return {
-        member: [],
-        datas: sumdata
-      }
-    },
-    mounted () {
-      this.member = this.datas.filter(item => {
-        if (item.id === this.memberId) {
-          return true
-        }
-      })
-    },
     props: {
-      memberId: {
-        type: String
+      memberData: {
+        type: Array
       }
     }
   }

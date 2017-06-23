@@ -1,6 +1,6 @@
 <template>
   <div class="camp-box">
-    <div v-for="camp in camps">
+    <div v-for="camp in camps" @click="onClick(camp)">
       <img :src="camp.pic" />
       <div>
         <button>预约</button>
@@ -16,6 +16,11 @@
     props: {
       camps: {
         type: Array
+      }
+    },
+    methods: {
+      onClick (item) {
+        this.$router.push(`/components/playground/PlayGroundDetail/${item.id}`)
       }
     }
   }

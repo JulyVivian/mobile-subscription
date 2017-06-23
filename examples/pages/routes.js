@@ -31,18 +31,18 @@ module.exports = [
         }
     },
     {
-      path: '/components/trader/appoint/:id',
+      path: '/components/appoint/:id',
       name: 'Appoint',
-      component: require('./components/trader/Appoint.vue'),
+      component: require('./components/Appoint.vue'),
         meta: {
             doc_title: '确认订单信息',
             depth: 20
         }
     },
     {
-      path: '/components/trader/vouchers',
+      path: '/components/vouchers',
       name: 'VoucherSelect',
-      component: require('./components/trader/VoucherSelect.vue'),
+      component: require('./components/VoucherSelect.vue'),
         meta: {
             doc_title: '代金券',
             depth: 20
@@ -72,6 +72,15 @@ module.exports = [
       component: require('./components/playground/PlayGround.vue'),
         meta: {
             doc_title: '训练营',
+            depth: 20
+        }
+    },
+    {
+      path: '/components/playground/PlayGroundDetail/:id',
+      name: 'PlayGroundDetail',
+      component: require('./components/playground/PlayGroundDetail.vue'),
+        meta: {
+            doc_title: '训练营详情',
             depth: 20
         }
     }

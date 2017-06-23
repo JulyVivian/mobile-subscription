@@ -1,30 +1,30 @@
 export const privateTraders = [
   {
-    id: 1,
+    id: '1',
     name: 'Jason Qiu',
     keywords: '减脂 運动表现',
     detail: '美国运动委员会(ACE)认证私人教练／线上运动教学4年/训练课程总监',
     pic: 'https://julyvivian.github.io/js_css_sources/p1.png'
   }, {
-    id: 2,
+    id: '2',
     name: '王薇薇',
     keywords: '减脂 運动表现',
     detail: '线上运动教学4年',
     pic: 'https://julyvivian.github.io/js_css_sources/p2.png'
   }, {
-    id: 3,
+    id: '3',
     name: 'Lily Chen',
     keywords: '减脂 運动表现',
     detail: '美国运动委员会(ACE)认证私人教练／线上运动教学4年/训练课程总监',
     pic: 'https://julyvivian.github.io/js_css_sources/p3.png'
   }, {
-    id: 4,
+    id: '4',
     name: 'Luna Jiang',
     keywords: '减脂 運动表现',
     detail: '美国运动委员会(ACE)认证私人教练／线上运动教学4年/训练课程总监',
     pic: 'https://julyvivian.github.io/js_css_sources/p4.png'
   }, {
-    id: 5,
+    id: '5',
     name: 'Rager Wang',
     keywords: '减脂 運动表现',
     detail: 'PlayGround训练课程总监',

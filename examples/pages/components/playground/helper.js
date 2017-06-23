@@ -1,5 +1,6 @@
 export const playgrounds = [
   {
+    id: '10',
     lessonname: '【减脂】FatPlay燃脂流汗挑战',
     downcount: '21',
     price: 3999,
@@ -7,6 +8,7 @@ export const playgrounds = [
     detail: '21天的燃脂计划，每周三次的训练。',
     pic: 'https://julyvivian.github.io/js_css_sources/ground1.png'
   }, {
+    id: '11',
     lessonname: '【翘臀】PeachPlay蜜桃臀挑战',
     downcount: '28',
     price: 3999,

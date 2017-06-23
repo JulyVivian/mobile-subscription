@@ -1,7 +1,7 @@
 <template>
   <div class="list-box">
     <ul>
-      <li v-for="item in list" :class="{'valid': item.isValid, 'not-valid': !item.isValid}">
+      <li v-for="item in list" :class="{'valid': item.isValid, 'not-valid': !item.isValid}" @click="_onclick(item)">
         <img src="../../assets/pick.png"/>
         <div class="list-bd">
           <span class="price">¥<b>{{item.price}}</b></span>
@@ -17,6 +17,11 @@
     props: {
       list: {
         type: Array
+      }
+    },
+    methods: {
+      _onclick (obj) {
+        window.history.go(-1)
       }
     }
   }
