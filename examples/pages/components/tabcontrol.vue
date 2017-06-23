@@ -1,109 +1,64 @@
 <template>
-    <div id="tab-control">
-        <navbar>Tab</navbar>
-
-        <div class="content">
-            <tab-control :tab-list="tabList" tab-index="0" height="200">
-                <template slot="tabPage" scope="props">
-                    <div>
-                        <p>{{props.item.name}} 内容云云</p>
-                    </div>
-                </template>
-            </tab-control>
-
-            <tab-control :tab-list="tabList" tab-index="2" height="200">
-                <div slot="tab1">
-                    <p>tab1 内容云云</p>
-                </div>
-                <div slot="tab2">
-                    <p>tab2 内容云云</p>
-                </div>
-                <div slot="tab3">
-                    <p v-for="i in 10">tab3 内容云云</p>
-                    <hr>
-                    <p v-for="i in 10">tab3 内容云云</p>
-                    <hr>
-                    <p v-for="i in 10">tab3 内容云云</p>
-                </div>
-            </tab-control>
-
-            <tab-control :tab-list="tabList" tab-index="0" height="auto">
-                <template slot="tabPage" scope="props">
-                    <div>
-                        <p v-for="i in 2">{{props.item.name}} 内容云云</p>
-                        <hr>
-                        <p v-for="i in 2">{{props.item.name}} 内容云云</p>
-                        <hr>
-                        <p v-for="i in 2">{{props.item.name}} 内容云云</p>
-                    </div>
-                </template>
-            </tab-control>
-
-            <tab-control :tab-list="tabList" tab-index="0" tab-type="2" height="200">
-                <template slot="tabPage" scope="props">
-                    <p>{{props.item.name}} 内容云云</p>
-                </template>
-            </tab-control>
+  <div class="tab-control-box">
+    <tab-control :tab-list="memberData" tab-index="0">
+      <template slot="tabPage" scope="props">
+        <div>
+          <h5>{{props.item.name}}</h5>
+          <p class="career">课程教练</p>
+          <p>{{props.item.detail}}</p>
         </div>
-    </div>
+      </template>
+    </tab-control>
+  </div>
 </template>
+<script>
+  import { TabControl } from 'vmc'
 
-<script type="es6">
-    import { Navbar, TabControl } from 'vmc';
-
-    export default {
-        components: {
-            Navbar,
-            TabControl
-        },
-        data() {
-            return {
-                tabList: [
-                    {
-                        title: 'Tab1',
-                        name: 'tab1'
-                    },
-                    {
-                        title: 'Tab2',
-                        name: 'tab2'
-                    },
-                    {
-                        title: 'Tab3',
-                        name: 'tab3'
-                    }
-                ]
-            }
-        },
-        mounted() {
-            setTimeout(() => {
-                this.tabList.push({
-                    title: 'Tab4',
-                    name: 'tab4'
-                });
-            }, 2000);
-        }
+  export default {
+    components: {
+      TabControl
+    },
+    props: {
+      memberData: {
+        type: Array
+      }
     }
+  }
 </script>
-
-<style rel="stylesheet/less" lang="less">
-    #tab-control {
-        .content {
-            height: 100%;
-            box-sizing: border-box;
-            background-color: #eeeeee;
-            overflow: auto;
-
-            .vmc-tab-control {
-                margin-bottom: 20px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-
-                .tab-pages {
-                    background-color: #dddddd;
-                }
-            }
+<style lang="less">
+  .tab-control-box{
+    box-sizing: border-box;
+    .vmc-tab-control{
+      .tab-items{
+        background-color: #0d0d0d;
+        padding-top: .22rem;
+        height: 1.66rem;
+        img{
+          height: 1.34rem;
+          width: 1.34rem;
         }
+      }
+      .tab-pages{
+        height: 2.3rem;
+        background-color: #171717;
+        .tab-page{
+          padding-top: .26rem;
+          text-align: center;
+          h5{
+            font-size: .4rem;
+            color: #ffffff;
+          }
+          p.career{
+            color: #ff851a;
+            padding: 0;
+          }
+          p{
+            font-size: .28rem;
+            color: #b2b2b2;
+            padding: 0 20%;
+          }
+        }
+      }
     }
+  }
 </style>

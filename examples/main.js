@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'development') {
     console.print = log;
 
     // 比vConsole功能略牛的调试工具
-    require('eruda').init();
+    // require('eruda').init();
 }
 
 Vue.use(Router);

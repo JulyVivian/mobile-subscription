@@ -1,6 +1,6 @@
 <template>
   <div class="playground-detail-box">
-    <tab-head :memberData="memberData"/>
+    <tab-control :memberData="memberData"/>
     <cell :arrow="false" class="recharge">
       <div slot="title"><img src="../../../assets/rmb.png"/>¥60/节</div>
       <div slot="content">充值优惠</div>
@@ -19,7 +19,7 @@
   import { Cell } from 'vmc'
   import { playgrounds } from './helper.js'
 
-  import TabHead from '../TabHead'
+  import TabControl from '../TabControl'
   import DetailContainer from '../DetailContainer'
 
   export default {
@@ -41,13 +41,13 @@
           if (item.id === id) {
             return true
           }
-        })
+        })[0].teachers
       }
     },
     methods: {
     },
     components: {
-      TabHead,
+      TabControl,
       Cell,
       DetailContainer
     }

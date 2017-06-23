@@ -8,7 +8,7 @@
                  v-for="(item, $index) in tabList">
 
                 <slot name="tabItem" :item="item" :index="$index">
-                    {{ item.title }}
+                    <img :src="item.pic" />
                 </slot>
             </div>
 
