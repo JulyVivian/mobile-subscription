@@ -3,6 +3,7 @@
     <tab-control :tab-list="memberData" tab-index="0">
       <template slot="tabPage" scope="props">
         <div>
+          <i></i>
           <h5>{{props.item.name}}</h5>
           <p class="career">课程教练</p>
           <p>{{props.item.detail}}</p>

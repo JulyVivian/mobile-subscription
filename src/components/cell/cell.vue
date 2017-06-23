@@ -1,5 +1,5 @@
 <template>
-    <div class="vmc-cell vmc-1px-top-bottom" @click="_onClick">
+    <div class="vmc-cell" @click="_onClick">
         <div class="cell-title">
             <slot name="title">{{title}}</slot>
         </div>

@@ -13,6 +13,7 @@
     </cell>
     <detail-container :title="titles[0]"></detail-container>
     <detail-container :title="titles[1]"></detail-container>
+    <action @click="goAppoint" :btnText="appointText"/>
   </div>
 </template>
 <script>
@@ -21,6 +22,7 @@
 
   import TabControl from '../TabControl'
   import DetailContainer from '../DetailContainer'
+  import Action from '../Action'
 
   export default {
     data () {
@@ -29,7 +31,8 @@
         playgrounds,
         memberData: [],
         titles: ['课程介绍', '注意事项'],
-        mode: 'vertical'
+        mode: 'vertical',
+        appointText: '立即预约'
       }
     },
     beforeMount () {
@@ -49,6 +52,7 @@
     components: {
       TabControl,
       Cell,
+      Action,
       DetailContainer
     }
   }
@@ -75,8 +79,7 @@
     }
     .vmc-cell{
       background-color: #171717;
-      border-color: #333333;
-      border-bottom: none;
+      border-top: 1px solid #333;
       color: #808080;
       padding: 0 .3rem;
       min-height: 1.2rem;

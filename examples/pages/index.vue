@@ -60,6 +60,16 @@
         width: 7.5rem;
         height: 2.8rem;
         overflow: hidden;
+        .vmc-slider{
+            .slider-dots{
+                i{
+                    background-color: #9da0a4;
+                }
+                i.active{
+                    background-color: #ffffff;
+                }
+            }
+        }
     }
 .mine {
     width: 100%;

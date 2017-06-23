@@ -2,7 +2,9 @@
   <div class="list-box">
     <ul>
       <li v-for="item in list" :class="{'valid': item.isValid, 'not-valid': !item.isValid}" @click="_onclick(item)">
-        <img src="../../assets/pick.png"/>
+        <img  v-if="item.isSelected" src="../../assets/unpick.png"/>
+        <img  v-else="!item.isSelected" src="../../assets/pick.png"/>
+        <img  src="../../assets/unpick.png"/>
         <div class="list-bd">
           <span class="price">¥<b>{{item.price}}</b></span>
           <span class="title">{{item.title}}</span>
@@ -21,6 +23,7 @@
     },
     methods: {
       _onclick (obj) {
+        obj.isSelected = !obj.isSelected 
         window.history.go(-1)
       }
     }

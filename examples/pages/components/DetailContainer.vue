@@ -53,6 +53,7 @@
     background-color: #171717;
     .intro-box{
       padding: .3rem;
+      border-top: 1px solid #333;
       p{
         font-size: .26rem;
         line-height: .34rem;
@@ -81,6 +82,7 @@
     }
     .notice-box{
       padding: .3rem;
+      border-top: 1px solid #333;
       p{
         font-size: .26rem;
         line-height: .34rem;
