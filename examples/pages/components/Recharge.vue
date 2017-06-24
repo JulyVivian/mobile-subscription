@@ -98,7 +98,7 @@
           float: left;
           margin-right: .38rem;
           margin-bottom: .38rem;
-          width: 3.14rem;
+          width: 3.13rem;
           height: 1.54rem;
           border: 1px solid #666666;
           text-align: center;

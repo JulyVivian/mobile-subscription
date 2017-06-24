@@ -3,7 +3,7 @@
     <head-content :memberData="memberData"/>
     <calender :onChooseDay="chooseDay"/>
     <timepay :list="timelist" :onSelectTime="selectTime"/>
-    <cell @click="openMap">
+    <cell @click="openMap" class="address">
       <div slot="title"><img src="../../../assets/location.png" />静安区安远路128号平高国际大厦3楼</div>
     </cell>
     <action @click="goAppoint" :btnText="appointText" :datas="dataSum"/>
@@ -80,6 +80,9 @@
   .detail-box {
     .vue-date-container{
       background-color: #171717;
+    }
+    .address.vmc-cell{
+      margin-bottom: 1.28rem;
     }
     .vmc-cell{
       background-color: #171717;

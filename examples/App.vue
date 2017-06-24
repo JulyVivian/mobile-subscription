@@ -65,5 +65,6 @@
         -webkit-overflow-scrolling: touch;
         font-size: 0.8rem;
         z-index: 0;
+        background-color: #0d0d0d;
     }
 </style>
