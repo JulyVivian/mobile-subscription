@@ -3,7 +3,7 @@
     <head-content :memberData="memberData"/>
     <cell :arrow="false" class="recharge">
       <div slot="title"><img src="../../../assets/rmb.png"/>¥60/节</div>
-      <div slot="content">充值优惠</div>
+      <div slot="content" @click="goToRecharge">充值优惠</div>
     </cell>
     <cell :arrow="false">
       <div slot="title"><img src="../../../assets/yellowtime.png"/>年月日时分</div>
@@ -51,10 +51,14 @@
           }
         })
       }
+      document.title = this.memberData[0].name      
     },
     methods: {
       goAppoint () {
         this.$router.push(`/components/appoint/${this.memberId}`)
+      },
+      goToRecharge () {
+        this.$router.push('/components/recharge')
       }
     },
     components: {
@@ -67,6 +71,7 @@
 </script>
 <style lang="less">
   .group-detail-box{
+    background-color: #0d0d0d;
     .recharge.vmc-cell{
       padding: .19rem .3rem;
       min-height: .82rem;
@@ -87,7 +92,7 @@
     }
     .vmc-cell{
       background-color: #171717;
-      border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
       color: #808080;
       padding: 0 .3rem;
       min-height: 1.2rem;

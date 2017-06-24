@@ -26,15 +26,15 @@
             return {
                 items: [
                     {
-                        image: '/static/image/slider/banner.jpg',
+                        image: 'https://julyvivian.github.io/js_css_sources/homebanner1.jpg',
                         title: '',
                         link: ''
                     }, {
-                        image: '/static/image/slider/banner.jpg',
+                        image: 'https://julyvivian.github.io/js_css_sources/homebanner2.jpg',
                         title: '',
                         link: ''
                     }, {
-                        image: '/static/image/slider/banner.jpg',
+                        image: 'https://julyvivian.github.io/js_css_sources/homebanner3.jpg',
                         title: '',
                         link: ''
                     }
@@ -83,26 +83,34 @@
         height: .38rem;
         line-height: .38rem;
         text-align: left;
-        text-indent: .3rem;
         color: #ffffff;
+        font-size: .3rem;
     }
-    .my-pre span {
+    .my-pre{
+        span {
         font-size: .3rem;
         color: #ff851a;
-        margin-left: 1rem;
+        margin-left: .8rem;
+        }
+        img{
+            margin-left: .2rem;
+        }
     }
     p {
         &:nth-child(1) {
         border-right: 1px solid #545454;
         }
         .enter {
-        float: right;
-        margin-right: .3rem;
-        width: .2rem;
+            float: right;
+            margin-top: .04rem;
+            width: .15rem;
+            height: .25rem;
         }
         img {
-        width: .3rem;
-        margin-right: .18rem;
+            width: .25rem;
+            height: .28rem;
+            float: left;
+            margin: .03rem .3rem 0 .3rem;
         }
     }
     }

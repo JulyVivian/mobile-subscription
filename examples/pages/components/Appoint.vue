@@ -64,8 +64,7 @@
   .appoint-box {
     .vmc-cell{
       background-color: #171717;
-      border-color: #333333;
-      border-bottom: none;
+      border-bottom: 1px solid #333;
       color: #808080;
       padding: 0 .3rem;
       min-height: 1.2rem;

@@ -129,7 +129,7 @@
 </script>
 
 <style lang="less" scoped>
-@color_1: #666666;
+@color_1: #4d4d4d;
 @background_color_1: #ff4236;
 
 .vue-date-container {
@@ -174,8 +174,8 @@
         width: 13.02rem;
         .cell {
           width: .57rem;
-          height: .57rem;
-          line-height: .57rem;
+          height: .53rem;
+          line-height: .53rem;
           margin: .08rem .18rem;
           float: left;
           font-size: .36rem;
@@ -185,6 +185,7 @@
         .cell.active {
           background-color: @background_color_1;
           border-radius: 50%;
+          padding-top: .04rem;
         }
       }
     }

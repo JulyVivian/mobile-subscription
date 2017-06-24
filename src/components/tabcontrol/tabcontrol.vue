@@ -9,10 +9,9 @@
 
                 <slot name="tabItem" :item="item" :index="$index">
                     <img :src="item.pic" />
+                    <img class="arrow" src="https://julyvivian.github.io/js_css_sources/arrow.png"/>
                 </slot>
             </div>
-
-            <div v-if="type == 1" class="tab-line" :class="'tab-line-' + direction" :style="lineStyle"></div>
         </div>
 
         <div class="tab-pages"

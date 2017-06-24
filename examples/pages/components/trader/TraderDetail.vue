@@ -68,6 +68,7 @@
     .vmc-cell{
       background-color: #171717;
       border-top: 1px solid #333;
+      border-bottom: 1px solid #333;
       color: #999999;
       padding: 0 .29rem;
       min-height: .66rem;

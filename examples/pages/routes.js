@@ -40,11 +40,20 @@ module.exports = [
         }
     },
     {
+      path: '/components/recharge',
+      name: 'Recharge',
+      component: require('./components/Recharge.vue'),
+        meta: {
+            doc_title: '充值',
+            depth: 20
+        }
+    },
+    {
       path: '/components/vouchers',
       name: 'VoucherSelect',
       component: require('./components/VoucherSelect.vue'),
         meta: {
-            doc_title: '代金券',
+            doc_title: '选择代金券',
             depth: 20
         }
     },
@@ -62,7 +71,7 @@ module.exports = [
       name: 'GroupDetail',
       component: require('./components/group/GroupDetail.vue'),
         meta: {
-            doc_title: '团课详细',
+            doc_title: '',
             depth: 20
         }
     },

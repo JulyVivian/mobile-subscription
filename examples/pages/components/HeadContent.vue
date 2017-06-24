@@ -2,9 +2,9 @@
   <div class="head-box">
     <img :src="memberData[0].pic" />
     <div class="head-conent">
-      <h5>{{memberData[0].name}}</h5>
+      <h5 class="ellipsis">{{memberData[0].name}}</h5>
       <p>{{memberData[0].keywords}}</p>
-      <div>{{memberData[0].detail}}</div>
+      <div><img src="../../assets/badge.png"/>{{memberData[0].detail}}</div>
     </div>
   </div>
 </template>
@@ -32,7 +32,7 @@
     .head-conent{
       margin-left: 1.58rem;
       h5{
-        font-size: .4rem;
+        font-size: .34rem;
         height: .5rem;
         line-height: .5rem;
       }
@@ -45,6 +45,13 @@
       div{
         font-size: .28rem;
         color: #b2b2b2;
+        padding-left: .42rem;
+        img{
+          width: .34rem;
+          min-height: .34rem;
+          float: left;
+          margin-left: -.42rem;
+        }
       }
     }
   }

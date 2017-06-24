@@ -35,6 +35,7 @@
     right: 0;
     left: 0;
     display: flex;
+    border-top: 1px solid #333333;
     .vmc-button{
       height: 1.08rem;
       line-height: 1.08rem;

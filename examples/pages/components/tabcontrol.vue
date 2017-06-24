@@ -33,11 +33,34 @@
       .tab-items{
         background-color: #0d0d0d;
         padding-top: .22rem;
+        padding-left: 3.08rem;
         height: 1.66rem;
+        display: initial;
         img{
           height: 1.34rem;
           width: 1.34rem;
         }
+        .tab-item{
+          float: left;
+          width: 1.34rem;
+          height: 1.67rem;
+          margin-right: .3rem;
+          background-color: #0d0d0d;
+          position: relative;
+          .arrow{
+            position: absolute;
+            bottom: 0;
+            width: .36rem;
+            height: .18rem;
+            left: .49rem;
+            display: none;
+          }
+        }
+        .tab-item.active{
+          .arrow{
+            display: block;
+          }
+        }        
       }
       .tab-pages{
         height: 2.3rem;

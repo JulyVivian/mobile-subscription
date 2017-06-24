@@ -1,6 +1,6 @@
 <template>
-  <transition :name="direction">
-  <predetermine :predeters="traders" mode="trader" :onGoToDetail="goToTraderDetail"/>
+  <transition>
+    <predetermine :predeters="traders" mode="trader" :onGoToDetail="goToTraderDetail"/>
   </transition>
 </template>
 

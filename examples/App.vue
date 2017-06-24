@@ -62,7 +62,6 @@
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
         -webkit-overflow-scrolling: touch;
         font-size: 0.8rem;
         z-index: 0;

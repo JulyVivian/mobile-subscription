@@ -1,10 +1,10 @@
 <template>
   <div class="predeter-box">
-    <div v-for="predeter in predeters" class="predeter-item">
-      <img :src="predeter.pic" @click="onGoToDetail(predeter)"/>
+    <div v-for="predeter in predeters" class="predeter-item" @click="onGoToDetail(predeter)">
+      <img :src="predeter.pic"/>
       <div :class="{ 'trader-box': mode === 'trader', 'lesson-box': mode === 'lesson' }">
         <button>预约</button>
-        <h5>{{predeter.name}}</h5>
+        <h5 class="ellipsis">{{predeter.name}}</h5>
         <p class="key-words">{{predeter.keywords}}</p>
         <p v-if="mode === 'trader'" class="detail ellipsis">{{predeter.detail}}</p>
         <p v-else="mode === 'lesson'" class="detail"><b></b><span>{{predeter.time}}</span><span>¥{{predeter.price}}</span></p>
@@ -51,9 +51,9 @@ export default {
       }
       .detail{
         b{
-          width: .26rem;
-          height: .26rem;
-          border: 2px solid #ffffff;
+          width: .25rem;
+          height: .25rem;
+          border: 1px solid #b2b2b2;
           display: inline-block;
           border-radius: 50%;
           margin-right: .1rem;
@@ -75,7 +75,7 @@ export default {
       h5{
         height: .5rem;
         line-height: .5rem;
-        font-size: .4rem;
+        font-size: .34rem;
       }
       .key-words{
         color: #ff851a;

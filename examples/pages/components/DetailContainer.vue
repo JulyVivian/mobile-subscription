@@ -1,5 +1,5 @@
 <template>
-  <div class="detail-container">
+  <div :class="{'detail-container intro': title === '课程介绍', 'detail-container notice': title === '注意事项'}">
     <cell :arrow="false">
       <div slot="title">
         <img src="../../assets/list.png"/>
@@ -48,15 +48,28 @@
   }
 </script>
 <style lang="less">
+  .detail-container.notice{
+    margin-bottom: 1.28rem;
+  }
   .detail-container{
     color: #cccccc;
     background-color: #171717;
-    .intro-box{
-      padding: .3rem;
-      border-top: 1px solid #333;
+    margin-top: .2rem;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    .vmc-cell{
+      border: 0;
+      min-height: 1.04rem;
+    }
+    .intro-box, .notice-box{
+      padding: 0 .3rem .3rem;
       p{
         font-size: .26rem;
         line-height: .34rem;
+        span{
+          margin-bottom: .2rem;
+          display: block;
+        }
       }
       img{
         height: 3.6rem;
@@ -77,19 +90,6 @@
             min-height: .62rem;
             line-height: .62rem;
           }
-        }
-      }
-    }
-    .notice-box{
-      padding: .3rem;
-      border-top: 1px solid #333;
-      p{
-        font-size: .26rem;
-        line-height: .34rem;
-        font-size: .26rem;
-        span{
-          margin-bottom: .2rem;
-          display: block;
         }
       }
     }

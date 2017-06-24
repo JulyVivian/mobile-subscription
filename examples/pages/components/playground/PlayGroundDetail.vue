@@ -3,12 +3,12 @@
     <tab-control :memberData="memberData"/>
     <cell :arrow="false" class="recharge">
       <div slot="title"><img src="../../../assets/rmb.png"/>¥60/节</div>
-      <div slot="content">充值优惠</div>
+      <div slot="content" @click="goToRecharge">充值优惠</div>
     </cell>
     <cell :arrow="false">
       <div slot="title"><img src="../../../assets/yellowtime.png"/>年月日时分</div>
     </cell>
-    <cell>
+    <cell class="address">
       <div slot="title"><img src="../../../assets/yellowlocation.png"/>地址</div>
     </cell>
     <detail-container :title="titles[0]"></detail-container>
@@ -45,9 +45,20 @@
             return true
           }
         })[0].teachers
+        document.title =  this.playgrounds.filter(item => {
+          if (item.id === id) {
+            return true
+          }
+        })[0].lessonname    
       }
     },
     methods: {
+      goAppoint () {
+        this.$router.push(`/components/appoint/${this.memberId}`)
+      },
+      goToRecharge () {
+        this.$router.push('/components/recharge')
+      }
     },
     components: {
       TabControl,
@@ -59,6 +70,13 @@
 </script>
 <style lang="less">
   .playground-detail-box{
+    background-color: #0d0d0d;
+    .detail-container{
+      border-top: 0;
+    }
+    .address.vmc-cell{
+      border-bottom: 1px solid #333333;
+    }
     .recharge.vmc-cell{
       padding: .19rem .3rem;
       min-height: .82rem;
