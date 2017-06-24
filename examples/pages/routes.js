@@ -4,6 +4,33 @@ module.exports = [
         redirect: '/index'
     },
     {
+        name: 'login',
+        path: '/login',
+        component: require('./components/login/Login.vue'),
+        meta: {
+            doc_title: '绑定手机号码',
+            depth: 10
+        }
+    },
+    {
+        name: 'personal',
+        path: '/personal',
+        component: require('./components/personal/Personal.vue'),
+        meta: {
+            doc_title: '用户服务协议',
+            depth: 10
+        }
+    },
+    {
+        name: 'useragreement',
+        path: '/useragreement',
+        component: require('./components/login/UserAgreement.vue'),
+        meta: {
+            doc_title: '个人中心',
+            depth: 10
+        }
+    },
+    {
         name: 'index',
         path: '/index',
         component: require('./index.vue'),
