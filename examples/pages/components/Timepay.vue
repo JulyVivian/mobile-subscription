@@ -1,7 +1,7 @@
 <template>
   <div class="time-pay-box">
     <ul class="clx">
-      <li v-for="item in list" :class="{'not-valid': !item.isValid}">
+      <li v-for="item in list" :class="{'not-valid': !item.isValid, 'active': item.isActive}" @click="_onclick(item)">
         <span>{{item.time}}</span>
         <span>¥{{item.price}}</span>
       </li>
@@ -13,6 +13,24 @@
     props: {
       list: {
         type: Array
+      },
+      onSelectTime: {
+        type: Function
+      }
+    },
+    methods: {
+      _onclick (obj) {
+        if (!obj.isValid) {
+          return false
+        } else {
+          this.list.forEach(item => {
+            if (item !== obj) {
+              item.isActive = false
+            }
+          })
+          obj.isActive = !obj.isActive
+        }
+        this.onSelectTime(obj)
       }
     }
   }

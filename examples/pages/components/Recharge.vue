@@ -10,13 +10,13 @@
     </cell>
     <div class="select-amount-box">
       <ul class="clx">
-        <li v-for="item in list" :class="{'active': item.isActive}">
+        <li v-for="item in list" :class="{'active': item.isActive}" @click="_onclick(item)">
           <span>¥{{item.amount}}</span>
           <span class="add">¥{{item.add}}</span>
         </li>
       </ul>
     </div>
-    <action :btnText="appointText"/>
+    <action :btnText="appointText" :datas="dataSum" type="recharge"/>
   </div>
 </template>
 <script>
@@ -55,7 +55,24 @@
             add: 1200
           },
         ],
-        appointText: '立即支付'
+        appointText: '立即支付',
+        dataSum: {
+          price: '',
+          add: ''
+        }
+      }
+    },
+    methods: {
+      _onclick (obj) {
+        this.list.forEach(item => {
+          if (item !== obj) {
+            item.isActive = false
+          } else {
+            item.isActive = !item.isActive
+          }
+        })
+        this.dataSum.price = obj.amount
+        this.dataSum.add = obj.add
       }
     }
   }

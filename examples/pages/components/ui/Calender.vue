@@ -21,6 +21,11 @@
   import util from './util'
 
   export default {
+    props: {
+      onChooseDay: {
+        type: Function
+      }
+    },
     data () {
       return {
         // 当前显示的时间
@@ -123,6 +128,15 @@
         this.isNext = true
         this.$refs.ele.style.transform = 'translateX(0)'
         this.$refs.ele.style.transitionDuration = 1 + 's'
+      }
+    },
+    watch: {
+      currentDay (newval, oldval) {
+        if (newval < this.current.day) {
+          this.onChooseDay(newval, this.current.month + 1)
+        } else {
+          this.onChooseDay(newval, this.current.month)
+        }
       }
     }
   }

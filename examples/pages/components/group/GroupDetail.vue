@@ -13,7 +13,7 @@
     </cell>
     <detail-container :title="titles[0]" :content="lessondetail.intro"></detail-container>
     <detail-container :title="titles[1]" :content="lessondetail.notice"></detail-container>
-    <action @click="goAppoint" :btnText="appointText"/>
+    <action @click="goAppoint" :btnText="appointText" :datas="dataSum"/>
   </div>
 </template>
 <script>
@@ -32,7 +32,13 @@
         lessondetail: {},
         memberData: [],
         appointText: '立即预约',
-        titles: ['课程介绍', '注意事项']
+        titles: ['课程介绍', '注意事项'],
+        dataSum: {
+          day: 0,
+          month: 0,
+          price: '',
+          time: ''
+        },
       }
     },
     beforeMount () {
@@ -72,6 +78,9 @@
 <style lang="less">
   .group-detail-box{
     background-color: #0d0d0d;
+    .head-box .head-conent h5{
+      margin-left: -.2rem;
+    }
     .recharge.vmc-cell{
       padding: .19rem .3rem;
       min-height: .82rem;

@@ -35,76 +35,91 @@ export const privateTraders = [
 export const payfortimes = [
   {
     time: '07: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '08: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '09: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '10: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '11: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '12: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '13: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '14: 00',
+    isActive: false,
     isValid: false,
     price: 400
   },
   {
     time: '15: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '16: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '17: 00',
+    isActive: false,
     isValid: false,
     price: 400
   },
   {
     time: '18: 00',
+    isActive: false,
     isValid: false,
     price: 400
   },
   {
     time: '19: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '20: 00',
+    isActive: false,
     isValid: true,
     price: 400
   },
   {
     time: '21: 00',
+    isActive: false,
     isValid: true,
     price: 400
   }

@@ -1,6 +1,7 @@
 <template>
   <div class="action-box">
-    <p v-if="des">月日<b>¥</b></p>
+    <p v-if="des && type !== 'recharge'">{{datas.month}}月{{datas.day}}日{{datas.time}}<b>¥{{datas.price}}</b></p>
+    <p v-else-if="des && type === 'recharge'" class="recharge"><b>¥{{datas.price}}</b>送¥{{datas.add}}</p>
     <v-button type="primary" @click="_onClick">{{btnText}}</v-button>
   </div>
 </template>
@@ -16,8 +17,14 @@
         type: [Boolean, String],
         default: true
       },
+      type: {
+        type: String
+      },
       btnText: {
         type: String
+      },
+      datas: {
+        type: Object
       }
     },
     methods: {
@@ -36,6 +43,14 @@
     left: 0;
     display: flex;
     border-top: 1px solid #333333;
+    .recharge{
+      b{
+        margin-left: 0;
+        margin-right: .2rem;
+        color: #ff3b44;        
+      }
+      color: #ffffff;
+    }
     .vmc-button{
       height: 1.08rem;
       line-height: 1.08rem;
@@ -48,11 +63,15 @@
     p{
       width: 4.34rem;
       color: #ff3b44;
-      font-size: .32rem;
-      text-align: center;
+      font-size: .28rem;
       height: 1.08rem;
       line-height: 1.08rem;
       background-color: #171717;
+      text-indent: .3rem;
+      b{
+        font-size: .34rem;
+        margin-left: .2rem;
+      }
     }
   }
 </style>

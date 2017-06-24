@@ -13,7 +13,7 @@
     </cell>
     <detail-container :title="titles[0]"></detail-container>
     <detail-container :title="titles[1]"></detail-container>
-    <action @click="goAppoint" :btnText="appointText"/>
+    <action @click="goAppoint" :btnText="appointText" :datas="dataSum"/>
   </div>
 </template>
 <script>
@@ -32,7 +32,13 @@
         memberData: [],
         titles: ['课程介绍', '注意事项'],
         mode: 'vertical',
-        appointText: '立即预约'
+        appointText: '立即预约',
+        dataSum: {
+          day: 0,
+          month: 0,
+          price: '',
+          time: ''
+        },
       }
     },
     beforeMount () {

@@ -1,12 +1,12 @@
 <template>
   <div class="detail-box">
     <head-content :memberData="memberData"/>
-    <calender />
-    <timepay :list="timelist"/>
+    <calender :onChooseDay="chooseDay"/>
+    <timepay :list="timelist" :onSelectTime="selectTime"/>
     <cell @click="openMap">
       <div slot="title"><img src="../../../assets/location.png" />静安区安远路128号平高国际大厦3楼</div>
     </cell>
-    <action @click="goAppoint" :btnText="appointText"/>
+    <action @click="goAppoint" :btnText="appointText" :datas="dataSum"/>
   </div>
 </template>
 <script>
@@ -24,6 +24,12 @@
       return {
         memberId: 0,
         timelist: payfortimes,
+        dataSum: {
+          day: 0,
+          month: 0,
+          price: '',
+          time: ''
+        },
         memberlist: privateTraders,
         memberData: [],
         appointText: '立即预约'
@@ -49,6 +55,16 @@
       },
       goAppoint () {
         this.$router.push(`/components/appoint/${this.memberId}`)
+      },
+      selectTime (item) {
+        console.log('time')
+        console.log('item', item)
+        this.dataSum.time = item.time
+        this.dataSum.price = item.price
+      },
+      chooseDay (day, month) {
+        this.dataSum.day = day
+        this.dataSum.month = month
       }
     },
     components: {

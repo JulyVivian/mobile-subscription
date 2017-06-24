@@ -33,7 +33,7 @@
       .tab-items{
         background-color: #0d0d0d;
         padding-top: .22rem;
-        padding-left: 3.08rem;
+        padding-left: 30%;
         height: 1.66rem;
         display: initial;
         img{
