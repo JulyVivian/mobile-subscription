@@ -45,7 +45,7 @@
           width: 1.34rem;
           height: 1.67rem;
           margin-right: .3rem;
-          background-color: #0d0d0d;
+          background: #0d0d0d;
           position: relative;
           .arrow{
             position: absolute;
