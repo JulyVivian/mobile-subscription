@@ -1,22 +1,21 @@
 <template>
   <div>
-    <campus :camps="grounds" type="normal"/>
+    <campus :camps="grounds" type="personal"/>
   </div>
 </template>
 
 <script>
-import { playgrounds } from './helper.js'
+import { playgroundlessons } from './helper.js'
 import Campus from '../Campus'
 
 export default {
-  name: 'PlayGround',
   data () {
     return {
-      grounds: playgrounds
+      grounds: playgroundlessons
     }
   },
   created () {
-    document.title = '训练营'
+    document.title = '已报名训练营'
   },
   components: {
     Campus

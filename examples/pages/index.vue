@@ -4,15 +4,15 @@
             <slider :list="items" height="100%" auto="3"></slider>
         </div>      
         <div class="mine">
-            <p><img src="../assets/person.png"/>个人中心<img src="../assets/enter.png" class="enter"/></p>
-            <p class="my-pre"><img src="../assets/myappoint.png"/>我的预约<span>2</span><img src="../assets/enter.png" class="enter"/></p>
+            <p @click="jump('personal')"><img src="../assets/person.png"/>个人中心<img src="../assets/enter.png" class="enter"/></p>
+            <p @click="jump('myappoint')" class="my-pre"><img src="../assets/myappoint.png"/>我的预约<span>2</span><img src="../assets/enter.png" class="enter"/></p>
         </div>
         <ul class="lessons clx">
             <li @click="jump('trader')"><img src="https://julyvivian.github.io/js_css_sources/1.png"/></li>
             <li @click="jump('group')"><img src="https://julyvivian.github.io/js_css_sources/2.png"/></li>
             <li @click="jump('playground')"><img src="https://julyvivian.github.io/js_css_sources/3.png"/></li>
-            <li><img src="https://julyvivian.github.io/js_css_sources/4.png"/></li>
-            <li><img src="https://julyvivian.github.io/js_css_sources/5.png"/></li>
+            <li @click="jump('recharge')"><img src="https://julyvivian.github.io/js_css_sources/4.png"/></li>
+            <li @click="jump('recommend')"><img src="https://julyvivian.github.io/js_css_sources/5.png"/></li>
         </ul>
     </div>
 </template>

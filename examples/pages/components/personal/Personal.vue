@@ -3,30 +3,30 @@
     <div class="card">
       <p class="card-title"><span>去充值</span>操场余额</p>
       <p class="price">¥18,888</p>
-      <p class="idlist"><span>历史账单</span><span>代金券</span>ID:13776890678</p>
+      <p class="idlist"><span @click="jump('historybill')">历史账单</span><span @click="openVoucherList">代金券</span>ID:13776890678</p>
     </div>
     <div class="train-times">
       <p><b>12</b><span>累计训练／次</span></p>
       <p><b>255</b><span>累计时长／分</span></p>
       <p><b>12</b><span>累计天数</span></p>
     </div>
-    <cell>
+    <cell @click="jump('traderecord')">
       <div slot="title">训练记录</div>
       <div slot="content">2</div>
     </cell>
-    <cell class="group-lesson">
+    <cell class="group-lesson" @click="jump('appointgroup')">
       <div slot="title">已预约团体课程</div>
       <div slot="content">3</div>
     </cell>
-    <cell>
+    <cell @click="jump('appointtrader')">
       <div slot="title">已预约个人课程</div>
       <div slot="content">1</div>
     </cell>
-    <cell>
+    <cell @click="jump('appointcampus')">
       <div slot="title">已报名训练营</div>
       <div slot="content">1</div>
     </cell>
-    <cell>
+    <cell @click="jump('info')" class="group-lesson">
       <div slot="title">个人信息</div>
     </cell>
   </div>
@@ -37,6 +37,14 @@
   export default {
     components: {
       Cell
+    },
+    methods: {
+      jump(path) {
+        this.$router.push('/personal/' + path)
+      },
+      openVoucherList () {
+        this.$router.push('/components/vouchers')
+      }
     }
   }
 </script>
@@ -120,6 +128,9 @@
       border-bottom: 1px solid #333333;  
       height: 1.02rem;
       padding: 0 .3rem;
+      .cell-title{
+        font-size: .32rem;
+      }
       .cell-arrow{
         i{
           color: #505051;

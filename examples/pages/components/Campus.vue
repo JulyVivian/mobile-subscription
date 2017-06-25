@@ -2,11 +2,15 @@
   <div class="camp-box">
     <div v-for="camp in camps" @click="onClick(camp)">
       <img :src="camp.pic" />
-      <div>
+      <div v-if="type === 'normal'">
         <button>预约</button>
         <p class="limits">限{{camp.limits}}人</p>
         <p class="price-days"><span>¥{{camp.price}}</span><img src="../../assets/time.png" />{{camp.downcount}}天</p>
         <p class="detail">{{camp.detail}}</p>
+      </div>
+      <div v-else="type === 'personal'">
+        <span class="status">{{getStatusText(camp.status)}}</span>
+        <p class="price-days"><span>¥{{camp.price}}</span><img src="../../assets/time.png" />{{camp.downcount}}天</p>
       </div>
     </div>
   </div>
@@ -16,11 +20,19 @@
     props: {
       camps: {
         type: Array
+      },
+      type: {
+        type: String
       }
     },
     methods: {
       onClick (item) {
         this.$router.push(`/components/playground/PlayGroundDetail/${item.id}`)
+      },
+      getStatusText (status) {
+        switch (status) {
+          case 'hassign': return '已报名'
+        }
       }
     }
   }
@@ -35,7 +47,7 @@
         display: block;
       }
       div{
-        height: .97rem;
+        max-height: .97rem;
         padding: .3rem;
         border-top: 1px solid #333333;
         border-bottom: 1px solid #333333;
@@ -49,6 +61,13 @@
           height: .25rem;
           color: #999999;
           font-size: .26rem;
+        }
+        .status{
+          position: absolute;
+          right: .28rem;
+          top: .35rem;
+          color: #808080;
+          font-size: .3rem;
         }
         button{
           float: right;

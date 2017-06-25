@@ -46,6 +46,7 @@
         font-size: 20px;
         font-family: "PingFang SC", "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
         font-weight: normal;
+        background-color: #0d0d0d;        
     }
 
     #app {
@@ -58,13 +59,7 @@
     }
 
     .page {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
         -webkit-overflow-scrolling: touch;
-        font-size: 0.8rem;
-        z-index: 0;
         background-color: #0d0d0d;
     }
 </style>

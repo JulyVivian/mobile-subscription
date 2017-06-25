@@ -39,7 +39,7 @@
         this.stop = !this.stop;
       },
       goToAgreement () {
-        this.$router.push('/useragreement')
+        this.$router.push('/login/useragreement')
       }
     }
   }
