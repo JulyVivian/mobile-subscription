@@ -1,19 +1,16 @@
 <template>
-  <div>
+  <div class="appoint-group-box">
     <lesson-list :list="grouplessons" type="appoint"/>
-    <modal />
   </div>
 </template>
 <script>
   import LessonList from '../LessonList'
-  import Modal from '../Modal'
 
   import { grouplessons } from './helper'
 
   export default {
     components: {
-      LessonList,
-      Modal
+      LessonList
     },
     data () {
       return {
@@ -22,4 +19,5 @@
     }
   }
 </script>
-<style></style>
+<style lang="less">
+</style>

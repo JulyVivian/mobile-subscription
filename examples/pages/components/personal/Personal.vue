@@ -135,7 +135,12 @@
         i{
           color: #505051;
         }
-      }    
+      }  
+      .cell-content{
+        div{
+          margin-bottom: -.04rem;
+        }
+      }  
     }
   }
 </style>

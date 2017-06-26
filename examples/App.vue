@@ -1,8 +1,6 @@
 <template>
     <div id="app">
-        <transition :name="direction">
-            <router-view class="page"></router-view>
-        </transition>
+        <router-view class="page"></router-view>
     </div>
 </template>
 

@@ -5,7 +5,7 @@
     <p class="with">你和TA都将获得</p>
     <img class="voucher" src="https://julyvivian.github.io/js_css_sources/coupon.png"/>
     <p class="has-invitated">你已邀请4位好友，共获得80元代金券</p>
-    <img src="https://julyvivian.github.io/js_css_sources/down.jpg"/>
+    <img class="bottom-bg-pic" src="https://julyvivian.github.io/js_css_sources/down.jpg"/>
   </div>
 </template>
 <script></script>
@@ -18,6 +18,13 @@
     text-align: center;
     img{
       width: 100%;
+    }
+    .bottom-bg-pic{
+      height: 3.62rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
     .title{
       color: #ff4236;

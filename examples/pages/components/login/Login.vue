@@ -4,8 +4,8 @@
     <form>
       <div><input type="tel" placeholder="手机号码"/></div>
       <div>
-        <input type="tel" placeholder="验证码"/>
         <span @click="startTimer">{{!stop ? '获取验证码' : timer+'s后重发'}}</span>
+        <input class="valid-code" type="tel" placeholder="验证码"/>
       </div>
       <button class="bind-btn">立即绑定</button>
     </form>
@@ -53,37 +53,42 @@
       height: 1.18rem;
       margin-bottom: 1.1rem;
     }
-    div{
-      height: .34rem;
-      line-height: .34rem;
-      padding: .3rem 0;
-      margin-bottom: .4rem;
-      border-bottom: 1px solid #8b8b8b;
-      display: flex;
-      input{
+    form{
+      div{
+        height: .94rem;
+        line-height: .94rem;
+        margin-bottom: .4rem;
+        border-bottom: 1px solid #8b8b8b;
+        input{
+          display: block;
+          height: 100%;
+          font-size: .36rem;
+        }
+        .valid-code{
+          width: 4.38rem;
+        }
+        span{
+          color: #ff4236;
+          font-size: .26rem;
+          width: 1.52rem;
+          height: .45rem;
+          line-height: .45rem;
+          float: right;
+          margin-top: .23rem;
+          border-left: 1px solid #8b8b8b;
+        }
+      }
+      .bind-btn{
+        margin-top: 1.42rem;
+        background-color: #ff4236;
         display: block;
-        flex: 1;
-        height: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        width: 100%;
+        border-radius: .5rem;
+        color: #ffffff;
         font-size: .36rem;
       }
-      span{
-        color: #ff4236;
-        font-size: .26rem;
-        width: 1.52rem;
-        float: right;
-        border-left: 1px solid #8b8b8b;
-      }
-    }
-    .bind-btn{
-      margin-top: 1.42rem;
-      background-color: #ff4236;
-      display: block;
-      height: 1rem;
-      line-height: 1rem;
-      width: 100%;
-      border-radius: .5rem;
-      color: #ffffff;
-      font-size: .36rem;
     }
     p{
       height: .38rem;

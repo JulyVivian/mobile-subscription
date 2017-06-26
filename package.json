@@ -1,20 +1,14 @@
 {
-  "name": "vmc",
+  "name": "playground",
   "version": "2.0.2",
-  "description": "Mobile components for vue@2x",
+  "description": "just for playground subscription",
   "main": "src/index.js",
-  "author": "Spikef",
+  "author": "zhouqiaoni",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Spikef/vmc"
+    "url": "https://github.com/JulyVivian/mobile-subscription"
   },
-  "keywords": [
-    "vue",
-    "components",
-    "mobile",
-    "ui"
-  ],
   "scripts": {
     "dev": "node build/dev-server.js",
     "docs": "node build/doc-server.js",

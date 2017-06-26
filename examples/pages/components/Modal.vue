@@ -1,33 +1,39 @@
 <template>
-  <div class="popup-wrapper">
+  <div class="popup-wrapper" v-if="showPop">
     <div class="mask"></div>
     <div class="popup-content">
       <slot name="title"></slot>
-      <slot name="content"></slot>
-      <slot name="bottom">
-        <span>暂不</span>
-        <span>打卡</span>
-      </slot>
+      <slot name="content" class="popup-bd"></slot>
+      <div class="popup-ft">
+        <span v-for="(btn, i) in btns" @click="_onClick(i)">{{btn}}</span>
+      </div>
     </div>
   </div>
 </template>
 <script>
   export default {
-    data () {
-      return {
-        showPop: true
+    props: {
+      btns: {
+        type: Array
+      },
+      showPop: {
+        type: Boolean
+      }
+    },
+    methods: {
+      _onClick (index) {
+        this.$emit('click', index)
       }
     }
   }
 </script>
-<style lang="less" scope>
+<style lang="less">
   .popup-wrapper{
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: none;
     .mask{
       position: fixed;
       top: 0;
@@ -48,8 +54,24 @@
       top: 50%;
       left: 50%;
       z-index: 11;
-      border-radius: .1rem;
+      border-radius: .3rem;
       color: #000000;
+      .popup-ft{
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: .87rem;
+        line-height: .87rem;
+        border-top: 1px solid #d9d9d9;        
+        span{
+          flex: 1; 
+        }
+        span+span{
+          border-left: 1px solid #d9d9d9;
+        }
+      }
     }
   }
 </style>
