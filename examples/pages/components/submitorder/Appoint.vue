@@ -38,7 +38,7 @@
 </template>
 <script>
   import { Cell } from 'vmc'
-  import Action from './Action'
+  import Action from '../Action'
 
   export default {
     components: {

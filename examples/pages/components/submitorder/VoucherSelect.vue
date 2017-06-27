@@ -4,8 +4,8 @@
   </div>
 </template>
 <script>
-  import Voucherlist from './Voucherlist'
-  import { vouchers } from './trader/helper.js'
+  import Voucherlist from '../Voucherlist'
+  import { vouchers } from '../trader/helper.js'
 
   export default {
     components: {
@@ -19,7 +19,4 @@
   }
 </script>
 <style>
-  .voucher-select{
-    background-color: #;
-  }
 </style>

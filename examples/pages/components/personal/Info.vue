@@ -23,7 +23,7 @@
     },
     data () {
       return {
-        listEdu: [],
+        listEdu: ['a', 'b'],
         vals: ['请填写', '请填写', '请填写', '请填写', '请填写', '请填写'],
         curIndex: 0,
         showPop1: false,
@@ -69,7 +69,7 @@
             name: '体重',
             val: '',
             type: 'multi',
-            detaillist: [30, 100]
+            detaillist: [30, 99]
           },
           {
             name: '健身目的',

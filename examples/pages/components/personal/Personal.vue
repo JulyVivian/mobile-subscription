@@ -3,7 +3,7 @@
     <div class="card">
       <p class="card-title"><span>去充值</span>操场余额</p>
       <p class="price">¥18,888</p>
-      <p class="idlist"><span @click="jump('historybill')">历史账单</span><span @click="openVoucherList">代金券</span>ID:13776890678</p>
+      <p class="idlist"><span @click="jump('historybill')">历史账单</span><span @click="jump('vouchers')">代金券</span>ID:13776890678</p>
     </div>
     <div class="train-times">
       <p><b>12</b><span>累计训练／次</span></p>
@@ -41,9 +41,6 @@
     methods: {
       jump(path) {
         this.$router.push('/personal/' + path)
-      },
-      openVoucherList () {
-        this.$router.push('/components/vouchers')
       }
     }
   }

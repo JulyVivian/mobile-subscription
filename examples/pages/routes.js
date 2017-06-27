@@ -49,6 +49,15 @@ module.exports = [
         }
     },
     {
+      path: '/personal/vouchers',
+      name: 'MyVouchers',
+      component: require('./components/personal/MyVouchers.vue'),
+        meta: {
+            doc_title: '我的代金券',
+            depth: 20
+        }
+    },
+    {
         name: 'traderecord',
         path: '/personal/traderecord',
         component: require('./components/personal/TradeRecord.vue'),
@@ -123,7 +132,7 @@ module.exports = [
     {
       path: '/components/appoint/:id',
       name: 'Appoint',
-      component: require('./components/Appoint.vue'),
+      component: require('./components/submitorder/Appoint.vue'),
         meta: {
             doc_title: '确认订单信息',
             depth: 20
@@ -159,7 +168,7 @@ module.exports = [
     {
       path: '/components/vouchers',
       name: 'VoucherSelect',
-      component: require('./components/VoucherSelect.vue'),
+      component: require('./components/submitorder/VoucherSelect.vue'),
         meta: {
             doc_title: '选择代金券',
             depth: 20
